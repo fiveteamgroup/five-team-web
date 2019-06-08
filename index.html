@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Five Team</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="icon" href="imagens/logo-fiveteam.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="imagens/logo-fiveteam.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+	<div id="site">
+		<div id="menu-topo">
+			<div id="painel-logo">
+				<center>
+					<img src="imagens/logo-fiveteam.png" height="80">
+					<p style="margin-top: -10px; color: white;">FiveTeam</p>	
+				</center>	
+			</div>
+
+			<div id="painel-links">
+				<div id="subpainel-links">
+					<a href="paginas/sobrenos.html" class="link">Sobre Nós</a>
+					<a href="paginas/contrato.html" class="link">Contrato</a>
+					<a href="paginas/servicos.html" class="link">Nossos Serviços</a>	
+				</div>
+			</div>
+
+			<div id="painel-buscar">
+				<input type="text" id="buscar" name="var_buscar">
+			</div>
+		</div>			
+
+		<div id="conteudo">
+			<center>
+
+				<div id="texto-slide">
+					
+				</div>
+
+				<div id="slide"  onmouseover="stopSlide(1)" onmouseout="continueSlide()" style="margin-top: 50px; margin-left: 50%; margin-right: 100%;">
+				 <div class="mySlides"> 
+				 	<img src="imagens/s1-programacao.png" style="border-radius: 100px;">
+				 </div>
+				 <div class="mySlides">
+				 	<img src="imagens/s2-design.jpg" style="border-radius: 100px;">
+				 </div>
+				</div>
+
+				<!--Os cards de cada funcionario-->
+				<div id="painel-card-funcionario" style="margin-top: 250px;">
+					<div style="margin-bottom: 40px;  color: #cc4d4d; font-family: inherit;">
+						<h2>Quem somos nós ?</h2>
+					</div>
+					<div class="card-funcionario" style="margin-left: 130px" onclick="abrirPopUp('gestor', 'João Daurelio', 'administrar a infraestrutura física e lógica dos locais informatizados, definir regras de utilização de sistemas, gerenciar os recursos humanos participantes das tecnologias da informação, acompanhar e definir rotinas, controlar os serviços de sistemas operacionais e de banco de dados, estudar e buscar reduzir os impactos tanto sociais, quanto econômicos e ambientais das tecnologias da informação na organização.', '@')">
+						Gestor
+						<div style="position: relative; top: 130px;">
+							João Daurelio
+						</div>
+					</div>
+					<div class="card-funcionario" onclick="abrirPopUp('front-end', 'Carlos Daniel', 'Responsável por desenvolver em HTML, CSS e JavaScript, produzindo o layout do produto digital e criando interatividade entre os elementos da página ou do aplicativo, entendendo e atendendo as necessidades do usuário final.'
+						,'carlosdaniels.araujo@gmail.com')">
+						Programador Front-End
+						<div style="position: relative; top: 130px;">
+							Carlos Daniel
+						</div>
+					</div>
+					<div class="card-funcionario" onclick="abrirPopUp('front-end2', 'Denilson Campos','Responsável por desenvolver em HTML, CSS e JavaScript, produzindo o layout do produto digital e criando interatividade entre os elementos da página ou do aplicativo, entendendo e atendendo as necessidades do usuário final.', 'denilsoncampos529@gmail.com')">
+						Programador Front-End
+						<div style="position: relative; top: 130px;">
+							Denilson Campos
+						</div>
+					</div>
+					<div class="card-funcionario" onclick="abrirPopUp('analista',
+					 'Gabriel', 'O analista de sistemas é um profissional da área de Tecnologia da Informação (TI) que analisa e desenvolve sistemas, mapeia processos, faz a modelagem de dados e levanta os requisitos para implementar esses programas de acordo com os objetivos e as regras de negócio da empresa contratante.' 
+							, '@')">
+						Analista
+						<div style="position: relative; top: 130px;">
+							Gabriel Gonçalves
+						</div>
+					</div>
+					<div class="card-funcionario" onclick="abrirPopUp('web-design', 'Max', ' É responsável por projetar e desenhar web sites, blogs, sistemas e aplicativos web. Seu papel é criar a interface gráfica do site, onde ocorrerá toda interação do usuário, O web designer deve ser capaz de produzir layouts para sites e blogs e banners para divulgação na internet, também deve ter conhecimento, ao menos básico, em linguagens de programação como: HTML, CSS, PHP e ASP.' 
+						, '@')">
+						Web Designer
+						<div style="position: relative; top: 130px;">
+							Max Alves
+						</div>
+					</div>
+				</div>
+			</center>	
+		</div>
+
+		<!--Modal-->
+		<div id="pop">
+			<a href="#" style="float: right;" onclick="closeModal()">X</a>
+			<div class="conteudo-modal">
+				<h3 id="content"></h3>
+				<hr>
+				<h4 id="descricao"></h4>
+				<h4 id="contato-privado" style="text-decoration: underline;">
+				</h4>
+			</div>
+		</div>
+
+		<div id="painel-rodape">
+			<center>
+				<div id="info">
+					<p style="color: white;">Todos os direitos reservados pela FiveTeam.</p>
+					<p style="color: white;">Entre em contato: teamfiveads@gmail.com</p>
+				</div>
+			</center>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var testando = 'test';
+		var slideIndex = 1;
+		var interval;
+
+		showDivs(slideIndex);
+
+		continueSlide();
+
+		function continueSlide() {
+			interval = setInterval(function() { 
+				plusDivs(1);
+			}, 4000);
+		}
+		
+		function stopSlide(n) {
+			clearInterval(interval);
+		}
+
+		function plusDivs(n) {
+		  	showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i; //index
+		  var slides = document.getElementsByClassName("mySlides"); //Pega todos os elementos com a class mySlides
+		 
+		  if (n > slides.length) {
+		  		slideIndex = 1;
+		  }
+		  if (n < 1) {
+		  	slideIndex = slides.length;
+
+		  }
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+
+		  slides[slideIndex-1].style.display = "block";  
+		  
+		}
+
+
+		function abrirPopUp(element, cabecalho, descricao, contato) {
+			switch(element) {
+				case 'gestor':
+					popUpDescricao(cabecalho, descricao, contato);
+					break;
+				case 'front-end':
+					popUpDescricao(cabecalho, descricao, contato);
+					break;
+				case 'front-end2':
+					popUpDescricao(cabecalho, descricao, contato);
+					break;
+				case 'analista':
+					popUpDescricao(cabecalho, descricao, contato);
+					break;
+				case 'web-design':
+					popUpDescricao(cabecalho, descricao, contato);
+					break;
+				case 'web-design2':
+					popUpDescricao(cabecalho, descricao, contato);
+					break;
+			}
+		}
+
+		function popUpDescricao(cabecalho, descricao, contato) {
+			document.getElementById('content').innerHTML = cabecalho;
+			document.getElementById('descricao').innerHTML = descricao;
+			document.getElementById('contato-privado').innerHTML = contato;
+			document.getElementById('pop').style.display='block';
+		}
+
+		function closeModal() {
+			document.getElementById('pop').style.display='none';
+		}
+
+	</script>
+</body>
+</html>
