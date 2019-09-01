@@ -2,195 +2,176 @@
 <html>
 <head>
 	<title>Five Team</title>
+	 
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link rel="icon" href="imagens/logo-fiveteam.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="imagens/logo-fiveteam.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <body>
 
 	<div id="site">
-		<div id="menu-topo">
-			<div id="painel-logo">
-				<center>
-					<img src="imagens/logo-fiveteam.png" height="80">
-					<p style="margin-top: -10px; color: white;">FiveTeam</p>	
-				</center>	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="#">
+			  	<img src="imagens/logo-fiveteam.png" height="80">
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="paginas/sobrenos.html">Sobre nós</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="paginas/contrato.html">Contrato</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="paginas/servicos.html">Serviços</a>
+			      </li>
+			    </ul>
+			    <form class="form-inline my-2 my-lg-0">
+			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    </form>
+			  </div>
+		</nav>
+
+
+		<div class="container">
+
+			<div class="row" style="margin-bottom: 100px; margin-top: 100px">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					        <img src="imagens/s1-programacao.png" class="d-block w-100" alt="...">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="imagens/s2-design.jpg" class="d-block w-100" alt="...">
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+
 			</div>
 
-			<div id="painel-links">
-				<div id="subpainel-links">
-					<a href="paginas/sobrenos.html" class="link">Sobre Nós</a>
-					<a href="paginas/contrato.html" class="link">Contrato</a>
-					<a href="paginas/servicos.html" class="link">Nossos Serviços</a>	
+			<div class="row container-card">
+				<div class="card col-sm-3" style="width: 18rem;">
+				  <img src="imagens/user.png" class="card-img-top" alt="...">
+				  	<div class="card-body">
+					    <h5 class="card-title" id="card-title">Carlos Daniel</h5>
+					    <p class="card-text">Programador</p>
+					   		<button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('carlos');">
+							  Visualizar
+							</button>
+					</div>
+				</div>
+
+				<div class="card col-sm-3" style="width: 18rem;">
+				  <img src="imagens/user.png" class="card-img-top" alt="...">
+				  	<div class="card-body">
+					    <h5 class="card-title" id="card-title">Gabriel Viesba</h5>
+					    <p class="card-text">Analista</p>
+					    <button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('gabriel');">
+							Visualizar
+						</button>
+					</div>
+				</div>
+
+				<div class="card col-sm-3" style="width: 18rem;">
+				  <img src="imagens/user.png" class="card-img-top" alt="...">
+				  	<div class="card-body">
+					    <h5 class="card-title" id="card-title">Max Alves</h5>
+					    <p class="card-text">Web Designer</p>
+					    <button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('max');">
+							 Visualizar
+						</button>
+					</div>
+				</div>
+
+				<div class="card col-sm-3" style="width: 18rem;">
+				  <img src="imagens/user.png" class="card-img-top" alt="...">
+				  	<div class="card-body">
+					    <h5 class="card-title" id="card-title">João Daurélio</h5>
+					    <p class="card-text">Gestor</p>
+					    <button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('joão');">
+							 Visualizar
+						</button>
+					</div>
 				</div>
 			</div>
-
-			<div id="painel-buscar">
-				<input type="text" id="buscar" name="var_buscar">
-			</div>
-		</div>			
-
-		<div id="conteudo">
-			<center>
-
-				<div id="texto-slide">
-					
-				</div>
-
-				<div id="slide"  onmouseover="stopSlide(1)" onmouseout="continueSlide()" style="margin-top: 50px; margin-left: 50%; margin-right: 100%;">
-				 <div class="mySlides"> 
-				 	<img src="imagens/s1-programacao.png" style="border-radius: 100px;">
-				 </div>
-				 <div class="mySlides">
-				 	<img src="imagens/s2-design.jpg" style="border-radius: 100px;">
-				 </div>
-				</div>
-
-				<!--Os cards de cada funcionario-->
-				<div id="painel-card-funcionario" style="margin-top: 250px;">
-					<div style="margin-bottom: 40px;  color: #cc4d4d; font-family: inherit;">
-						<h2>Quem somos nós ?</h2>
-					</div>
-					<div class="card-funcionario" style="margin-left: 130px" onclick="abrirPopUp('gestor', 'João Daurelio', 'administrar a infraestrutura física e lógica dos locais informatizados, definir regras de utilização de sistemas, gerenciar os recursos humanos participantes das tecnologias da informação, acompanhar e definir rotinas, controlar os serviços de sistemas operacionais e de banco de dados, estudar e buscar reduzir os impactos tanto sociais, quanto econômicos e ambientais das tecnologias da informação na organização.', '@')">
-						Gestor
-						<div style="position: relative; top: 130px;">
-							João Daurelio
-						</div>
-					</div>
-					<div class="card-funcionario" onclick="abrirPopUp('front-end', 'Carlos Daniel', 'Responsável por desenvolver em HTML, CSS e JavaScript, produzindo o layout do produto digital e criando interatividade entre os elementos da página ou do aplicativo, entendendo e atendendo as necessidades do usuário final.'
-						,'carlosdaniels.araujo@gmail.com')">
-						Programador Front-End
-						<div style="position: relative; top: 130px;">
-							Carlos Daniel
-						</div>
-					</div>
-					<div class="card-funcionario" onclick="abrirPopUp('front-end2', 'Denilson Campos','Responsável por desenvolver em HTML, CSS e JavaScript, produzindo o layout do produto digital e criando interatividade entre os elementos da página ou do aplicativo, entendendo e atendendo as necessidades do usuário final.', 'denilsoncampos529@gmail.com')">
-						Programador Front-End
-						<div style="position: relative; top: 130px;">
-							Denilson Campos
-						</div>
-					</div>
-					<div class="card-funcionario" onclick="abrirPopUp('analista',
-					 'Gabriel', 'O analista de sistemas é um profissional da área de Tecnologia da Informação (TI) que analisa e desenvolve sistemas, mapeia processos, faz a modelagem de dados e levanta os requisitos para implementar esses programas de acordo com os objetivos e as regras de negócio da empresa contratante.' 
-							, '@')">
-						Analista
-						<div style="position: relative; top: 130px;">
-							Gabriel Gonçalves
-						</div>
-					</div>
-					<div class="card-funcionario" onclick="abrirPopUp('web-design', 'Max', ' É responsável por projetar e desenhar web sites, blogs, sistemas e aplicativos web. Seu papel é criar a interface gráfica do site, onde ocorrerá toda interação do usuário, O web designer deve ser capaz de produzir layouts para sites e blogs e banners para divulgação na internet, também deve ter conhecimento, ao menos básico, em linguagens de programação como: HTML, CSS, PHP e ASP.' 
-						, '@')">
-						Web Designer
-						<div style="position: relative; top: 130px;">
-							Max Alves
-						</div>
-					</div>
-				</div>
-			</center>	
 		</div>
 
 		<!--Modal-->
-		<div id="pop">
-			<a href="#" style="float: right;" onclick="closeModal()">X</a>
-			<div class="conteudo-modal">
-				<h3 id="content"></h3>
-				<hr>
-				<h4 id="descricao"></h4>
-				<h4 id="contato-privado" style="text-decoration: underline;">
-				</h4>
-			</div>
+		<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-scrollable" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="modal-title"></h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div id="campo"></div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 
-		<div id="painel-rodape">
-			<center>
-				<div id="info">
-					<p style="color: white;">Todos os direitos reservados pela FiveTeam.</p>
-					<p style="color: white;">Entre em contato: teamfiveads@gmail.com</p>
-				</div>
-			</center>
-		</div>
 	</div>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 
-		var testando = 'test';
-		var slideIndex = 1;
-		var interval;
+	function showModal(desc, nome) {
+		$(document).ready(function(){
+			  $("#campo").text(desc);
+			  $("#modal-title").text(nome);
+			  $("#exampleModalScrollable").modal();
+		});
+	}
 
-		showDivs(slideIndex);
-
-		continueSlide();
-
-		function continueSlide() {
-			interval = setInterval(function() { 
-				plusDivs(1);
-			}, 4000);
+	function activeModal(valor) {
+		switch(valor) {
+			case 'carlos':
+				var desc = 'Responsável por desenvolver em HTML, CSS e JavaScript, produzindo o layout do produto digital e criando interatividade entre os elementos da página ou do aplicativo, entendendo e atendendo as necessidades do usuário final.';
+				var nome = 'Carlos Daniel';
+				showModal(desc, nome);
+			break;
+			case 'gabriel':
+				var desc = 'O analista de sistemas é um profissional da área de Tecnologia da Informação (TI) que analisa e desenvolve sistemas, mapeia processos, faz a modelagem de dados e levanta os requisitos para implementar esses programas de acordo com os objetivos e as regras de negócio da empresa contratante.';
+				var nome = 'Gabriel Viesba';
+				showModal(desc, nome);
+			break;
+			case 'joão':
+				var desc = 'administrar a infraestrutura física e lógica dos locais informatizados, definir regras de utilização de sistemas, gerenciar os recursos humanos participantes das tecnologias da informação, acompanhar e definir rotinas, controlar os serviços de sistemas operacionais e de banco de dados, estudar e buscar reduzir os impactos tanto sociais, quanto econômicos e ambientais das tecnologias da informação na organização.';
+				var nome = 'João Daurélio';
+				showModal(desc, nome);
+			break;
+			case 'max':
+				var desc = ' É responsável por projetar e desenhar web sites, blogs, sistemas e aplicativos web. Seu papel é criar a interface gráfica do site, onde ocorrerá toda interação do usuário, O web designer deve ser capaz de produzir layouts para sites e blogs e banners para divulgação na internet, também deve ter conhecimento, ao menos básico, em linguagens de programação como: HTML, CSS, PHP e ASP.';
+				var nome = 'Max Alves';
+				showModal(desc, nome);
 		}
-		
-		function stopSlide(n) {
-			clearInterval(interval);
-		}
+	}
 
-		function plusDivs(n) {
-		  	showDivs(slideIndex += n);
-		}
-
-		function showDivs(n) {
-		  var i; //index
-		  var slides = document.getElementsByClassName("mySlides"); //Pega todos os elementos com a class mySlides
-		 
-		  if (n > slides.length) {
-		  		slideIndex = 1;
-		  }
-		  if (n < 1) {
-		  	slideIndex = slides.length;
-
-		  }
-		  for (i = 0; i < slides.length; i++) {
-		    slides[i].style.display = "none";  
-		  }
-
-		  slides[slideIndex-1].style.display = "block";  
-		  
-		}
-
-
-		function abrirPopUp(element, cabecalho, descricao, contato) {
-			switch(element) {
-				case 'gestor':
-					popUpDescricao(cabecalho, descricao, contato);
-					break;
-				case 'front-end':
-					popUpDescricao(cabecalho, descricao, contato);
-					break;
-				case 'front-end2':
-					popUpDescricao(cabecalho, descricao, contato);
-					break;
-				case 'analista':
-					popUpDescricao(cabecalho, descricao, contato);
-					break;
-				case 'web-design':
-					popUpDescricao(cabecalho, descricao, contato);
-					break;
-				case 'web-design2':
-					popUpDescricao(cabecalho, descricao, contato);
-					break;
-			}
-		}
-
-		function popUpDescricao(cabecalho, descricao, contato) {
-			document.getElementById('content').innerHTML = cabecalho;
-			document.getElementById('descricao').innerHTML = descricao;
-			document.getElementById('contato-privado').innerHTML = contato;
-			document.getElementById('pop').style.display='block';
-		}
-
-		function closeModal() {
-			document.getElementById('pop').style.display='none';
-		}
-
-	</script>
+</script>
+	
 </body>
 </html>

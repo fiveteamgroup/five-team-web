@@ -1,118 +1,21 @@
 #site {
+    justify-content: center;
         width: 100%;
         height: 1000px;
-    }
-    #menu-topo {
-        background-color: #632c2d;
-        width: 100%;
-        height: 100px;
-    }
-    #conteudo {
-        width: 100%;
-        height: 750px;
-    }
-    .link {
-        color: white;
-        padding: 15px;
-        display: inline-block;
-        text-decoration: none;
-    }
-    .link:hover {
-        background-color:#8a5351;
-        color: white;
-        border-bottom:3px solid #EA0000;
-    }
-    #subpainel-links {
-        position: absolute;
-        top: 50px;
-    }
-    #buscar {
-        position: absolute;
-        top: 60px;
-    }
-    .card-funcionario {
-        background: url(../imagens/user.png) no-repeat;  
-        background-position: center; 
-        text-align: center;
-        height: 200px;
-        width: 200px;
-        background-color:white;
-        float: left;
-        margin-right: 15px;
-        border-style: solid;
-        border-color: white;
-        box-shadow:2px 2px 5px #632c2d;
-        border-radius: 5px;
-    }
-    .card-funcionario:hover {
-        box-shadow: 2px 5px 18px #cc4d4d;
-        cursor: pointer;
-    }
-    #info {
-        position: absolute;
-        top: 950px;
-        right: 500px;
-    }
-    #painel-logo {
-        width: 200px;
-        height: 100px;
-        float: left;
-        margin-right: 250px;
-        background-color: #632c2d;
-    }
-    #painel-links {
-        width: 400px;
-        height: 100px; 
-        float: left; 
-        margin-right: 250px; 
-        background-color: #632c2d;
-    }
-    #painel-buscar {
-        width: 200px; 
-        height: 90px; 
-        float: left; 
-        background-color: #632c2d;
-    }
-    #painel-rodape {
-        width: 100%; 
-        height: 200px; 
-        background-color: #632c2d;
-    }
-    #painel-card-funcionario {
-        width: 1350px; 
-        height: 200px; 
-        margin-top: 150px;
-    }
+}
 
-#pop {
-    background-color: white;
-    display:none;
-    position:absolute;
-    top:70%;
-    left:50%;
-    margin-left:-150px;
-    margin-top:-100px;
-    padding:10px;
-    width:500px;
-    height:300px;
-    border:1px solid #d0d0d0;
-    border-radius: 10px;
-    box-shadow:2px 5px 5px gray;
-}
-#pop:hover {
-    box-shadow:2px 5px 10px #632c2d;
-    cursor: pointer;
-}
-a {
-    text-decoration: none;
-}
-.conteudo-modal {
+.card {
+    margin-right: 10px;
+    margin-bottom: 10px;
     text-align: center;
 }
-.mySlides {
-    scroll-behavior: smooth;
+
+.container-card {
     display: flex;
-    height: 200px;
-    width: 300px;
-    border-radius: 20px;
+    justify-content: center;
+}
+
+.card-img-top {
+    width: 50px !important;
+    height: 50px !important;
 }
