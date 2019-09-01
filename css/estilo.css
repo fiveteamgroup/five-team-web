@@ -10,6 +10,22 @@
     text-align: center;
 }
 
+.load {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('.../imagens/load.gif') no-repeat center !important;
+}
+
+.noActive {
+    display: none;
+}
+.yesActive {
+
+}
+
 .container-card {
     display: flex;
     justify-content: center;
