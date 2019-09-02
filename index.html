@@ -23,46 +23,54 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <body>
 
+  <!--Loader da página-->
   <div id="loading"></div>
 
-  <div id="container">
-  	
-  </div>
-	<div id="site">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  <a class="navbar-brand" href="#">
-			  	<img src="imagens/logo-fiveteam.png" height="80">
-			  </a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
+  <!--Onde reveza o loader e o conteúdo do site-->
+  <div id="container"></div>
 
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	<!--Todo o conteúdo da página-->
+	<div id="site">
+		<!--Menu-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+				<img src="imagens/logo-fiveteam.png" height="80">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="paginas/sobrenos.html">Sobre nós</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="paginas/contrato.html">Contrato</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="paginas/servicos.html">Serviços</a>
-			      </li>
+			    	<li class="nav-item active">
+			        	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="paginas/sobrenos.html">Sobre nós</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="paginas/contrato.html">Contrato</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="paginas/servicos.html">Serviços</a>
+			      	</li>
 			    </ul>
 			    <form class="form-inline my-2 my-lg-0">
 			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			      <button class="btn btn-outline-primary" type="submit">Search</button>
 			    </form>
-			  </div>
+			</div>
 		</nav>
 
 
 		<div class="container">
-
-			<div class="row" style="margin-bottom: 100px; margin-top: 100px">
+			<!--Slide fotos-->
+			<div class="row" style="margin-bottom: 40px; margin-top: 40px">
+				<div class="col-sm-6">
+					<h4>O que já fizemos</h4>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 100px; margin-top: 50px">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-6">
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -77,49 +85,54 @@
 					</div>
 				</div>
 				<div class="col-sm-3"></div>
-
 			</div>
 
+			<!--Cards de cada integrante da equipe / card 1-->
+			<div class="row" style="margin-bottom: 40px">
+				<div class="col-sm-6">
+					<h4>Nossa equipe</h4>
+				</div>
+			</div>
 			<div class="row container-card">
 				<div class="card col-sm-3" style="width: 18rem;">
 				  <img src="imagens/user.png" class="card-img-top" alt="...">
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">Carlos Daniel</h5>
 					    <p class="card-text">Programador</p>
-					   		<button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('carlos');">
+					   		<button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('carlos');">
 							  Visualizar
 							</button>
 					</div>
 				</div>
-
+				<!--card 2-->
 				<div class="card col-sm-3" style="width: 18rem;">
 				  <img src="imagens/user.png" class="card-img-top" alt="...">
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">Gabriel Viesba</h5>
 					    <p class="card-text">Analista</p>
-					    <button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('gabriel');">
+					    <button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('gabriel');">
 							Visualizar
 						</button>
 					</div>
 				</div>
-
+				<!--card 3-->
 				<div class="card col-sm-3" style="width: 18rem;">
 				  <img src="imagens/user.png" class="card-img-top" alt="...">
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">Max Alves</h5>
 					    <p class="card-text">Web Designer</p>
-					    <button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('max');">
+					    <button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('max');">
 							 Visualizar
 						</button>
 					</div>
 				</div>
-
+				<!--card 4-->
 				<div class="card col-sm-3" style="width: 18rem;">
 				  <img src="imagens/user.png" class="card-img-top" alt="...">
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">João Daurélio</h5>
 					    <p class="card-text">Gestor</p>
-					    <button type="button" class="btn btn-primary" id="aa" data-toggle="modal" onclick="activeModal('joão');">
+					    <button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('joão');">
 							 Visualizar
 						</button>
 					</div>
@@ -161,12 +174,9 @@
 	}, 3000);
 
 	 
-	//function loadingPage() {
-		$(document).ready(function() {
-			$("#loading").html('<div class="load"><img src="imagens/load.gif"></div>');
-		});
-
-	//}
+	$(document).ready(function() {
+		$("#loading").html('<div class="load"><img src="imagens/load.gif"></div>');
+	});
 
 	function showModal(desc, nome) {
 		$(document).ready(function(){
@@ -197,6 +207,7 @@
 				var desc = ' É responsável por projetar e desenhar web sites, blogs, sistemas e aplicativos web. Seu papel é criar a interface gráfica do site, onde ocorrerá toda interação do usuário, O web designer deve ser capaz de produzir layouts para sites e blogs e banners para divulgação na internet, também deve ter conhecimento, ao menos básico, em linguagens de programação como: HTML, CSS, PHP e ASP.';
 				var nome = 'Max Alves';
 				showModal(desc, nome);
+			break;
 		}
 	}
 
