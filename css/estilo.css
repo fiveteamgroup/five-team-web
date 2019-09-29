@@ -1,15 +1,28 @@
+body {
+}
 #site {
     justify-content: center;
     width: 100%;
     height: 1000px;
 }
 
-.navbar {
-    background-color: #444 !important;
+nav {
+    background: linear-gradient(to right, #d85e69, #d65b66, #d55762, #d3545f, #d1505c, #d24d59,
+     #d24957, #d34654, #d54250, #d83e4d, #da3a49, #dc3545);
     display: flex;
 }
 
-h4 {
+.nav-link {
+    color: white !important;
+}
+
+.btn-outline-danger-custom {
+    color: white !important;
+    border-color: white !important;
+}
+
+p {
+    font-size: 18px;
     font: monospace;
     font-family: courier;
     text-shadow: inherit;
@@ -42,7 +55,7 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url('.../imagens/load.gif') no-repeat center !important;
+    background: url('.../imagens/ecl.gif') no-repeat center !important;
 }
 
 .noActive {

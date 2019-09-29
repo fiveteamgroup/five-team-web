@@ -32,9 +32,9 @@
   	<!--Todo o conteúdo da página-->
 	<div id="site">
 		<!--Menu-->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-light">
 			<a class="navbar-brand" href="#">
-				<img src="imagens/logo-fiveteam.png" height="80">
+				<img src="imagens/65-white.png" height="140">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -57,21 +57,27 @@
 			    </ul>
 			    <form class="form-inline my-2 my-lg-0">
 			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			      <button class="btn btn-outline-primary" type="submit">Search</button>
+			      <button class="btn btn-outline-danger-custom" type="submit">Search</button>
 			    </form>
 			</div>
 		</nav>
 
-
+		<br/>
 		<div class="container">
 			<!--Slide fotos-->
 			<div class="row" style="margin-bottom: 40px; margin-top: 40px">
 				<div class="col-sm-6">
-					<h4>O que já fizemos</h4>
+					<h4 style="color: #dc3545; font-family:  Montserrat,sans-serif;">O que já fizemos</h4>
+					
 				</div>
 			</div>
 			<div class="row" style="margin-bottom: 100px; margin-top: 50px">
-				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<p>Visando sempre a resolução dos problemas com base em
+						estatísticas de dados e criação de softwares, o objetivo principal
+						da empresa é resolver de forma prática o problema apresentado
+						pelo cliente.</p>
+				</div>
 				<div class="col-sm-6">
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 					  <div class="carousel-inner">
@@ -84,7 +90,6 @@
 					  </div>
 					</div>
 				</div>
-				<div class="col-sm-3"></div>
 			</div>
 
 			<!--Cards de cada integrante da equipe / card 1-->
@@ -99,7 +104,7 @@
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">Carlos Daniel</h5>
 					    <p class="card-text">Programador</p>
-					   		<button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('carlos');">
+					   		<button type="button" class="btn btn-outline-danger" id="aa" data-toggle="modal" onclick="activeModal('carlos');">
 							  Visualizar
 							</button>
 					</div>
@@ -110,7 +115,7 @@
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">Gabriel Viesba</h5>
 					    <p class="card-text">Analista</p>
-					    <button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('gabriel');">
+					    <button type="button" class="btn btn-outline-danger" id="aa" data-toggle="modal" onclick="activeModal('gabriel');">
 							Visualizar
 						</button>
 					</div>
@@ -121,7 +126,7 @@
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">Max Alves</h5>
 					    <p class="card-text">Web Designer</p>
-					    <button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('max');">
+					    <button type="button" class="btn btn-outline-danger" id="aa" data-toggle="modal" onclick="activeModal('max');">
 							 Visualizar
 						</button>
 					</div>
@@ -132,7 +137,7 @@
 				  	<div class="card-body">
 					    <h5 class="card-title" id="card-title">João Daurélio</h5>
 					    <p class="card-text">Gestor</p>
-					    <button type="button" class="btn btn-outline-primary" id="aa" data-toggle="modal" onclick="activeModal('joão');">
+					    <button type="button" class="btn btn-outline-danger" id="aa" data-toggle="modal" onclick="activeModal('joão');">
 							 Visualizar
 						</button>
 					</div>
@@ -175,7 +180,7 @@
 
 	 
 	$(document).ready(function() {
-		$("#loading").html('<div class="load"><img src="imagens/load.gif"></div>');
+		$("#loading").html('<div class="load"><img src="imagens/ecl.gif"></div>');
 	});
 
 	function showModal(desc, nome) {
